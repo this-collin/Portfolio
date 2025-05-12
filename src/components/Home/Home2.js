@@ -8,6 +8,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Home2() {
   return (
@@ -23,7 +24,7 @@ function Home2() {
               <br />
               <br />I'm efficient in
               <i>
-                <b className="purple"> Ruby on Rails, Java, Javascript, Git, and more </b>
+                <b className="purple"> Ruby on Rails, Java, Javascript, Git, and <Link to="/about" className="purple">more</Link> </b>
               </i>
               <br />
               <br />
