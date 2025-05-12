@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -9,8 +8,14 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import useGithubProfile from "../../hooks/UseGithubProfile.js";
 
 function Home2() {
+  const { profile, loading, error } = useGithubProfile("this-collin");
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error loading profile</div>;
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -28,7 +33,7 @@ function Home2() {
               </i>
               <br />
               <br />
-              My main interest's within the field are building &nbsp;
+              My main interests within the field are building &nbsp;
               <i>
                 <b className="purple">Data Intensive Applications </b> and
                 delivering great{" "}
@@ -55,8 +60,18 @@ function Home2() {
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img src={profile?.avatar_url} className="img-fluid" alt="avatar" style={{ 
+                  borderRadius: "50%",
+                  width: "350px",
+                  height: "350px",
+                  objectFit: "cover"
+                }} />
             </Tilt>
+            <div className="text-center" style={{ marginTop: "-20px" }}>
+              <p className="home-about-body" style={{ color: "white" }}>
+                {profile?.bio || "Loading bio..."}
+              </p>
+            </div>
           </Col>
         </Row>
         <Row>
@@ -96,16 +111,6 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              {/* <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li> */}
             </ul>
           </Col>
         </Row>

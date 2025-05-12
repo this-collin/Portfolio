@@ -8,6 +8,7 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import restapiblack from "../../Assets/Projects/restapiblack.png";
 import restapigreen from "../../Assets/Projects/restapigreen.png";
+import webscraping from "../../Assets/Projects/webscraping.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
@@ -36,12 +37,12 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={webscraping}
               isBlog={false}
               title="Documentation Web Scraper"
               description="A web scraper that scrapes the documentation of various programming languages/frameworks and stores it in a postgres database. The data is then used to send to end users who want to learn more about their desired language."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              ghLink="https://github.com/this-collin/DocumentationScraper"
+              // demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
 
