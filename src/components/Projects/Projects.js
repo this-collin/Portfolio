@@ -30,7 +30,7 @@ function Projects() {
               isBlog={false}
               title="Twitter API clone"
               description="RESTful API using Spring Boot, JPA, and Postgresql created as a Twitter clone."
-              ghLink="https://github.com/fasttrackd-student-work/spring-assessment-social-media-april-2025-team-3"
+              ghLink="https://github.com/this-collin/Twitter-API-Clone"
               // demoLink="https://chatify-49.web.app/"
             />
           </Col>
