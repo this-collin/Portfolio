@@ -41,7 +41,7 @@ function Projects() {
               isBlog={false}
               title="Documentation Web Scraper"
               description="A web scraper that scrapes the documentation of various programming languages/frameworks and stores it in a postgres database. The data is then used to send to end users who want to learn more about their desired language."
-              ghLink="https://github.com/this-collin/DocumentationScraper"
+              ghLink="https://github.com/dr-scraper/railsDigest"
               // demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
